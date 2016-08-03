@@ -28,6 +28,8 @@
     <xs:sequence/>
     <xs:attribute name="accessGranted" type="xs:boolean" use="required"/>
     <xs:attribute name="timestamp" type="xs:long"/>
+    <xs:attribute name="counter" type="xs:int"/>
+    <xs:attribute name="counterThreshold" type="xs:int"/>
     <xs:attribute name="accessDeniedUntil" type="xs:dateTime"/>
   </xs:complexType>
 
