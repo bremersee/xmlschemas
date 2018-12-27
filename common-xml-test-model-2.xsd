@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://bremersee.org/xmlschemas/common-xml-test-model-2" xmlns:tns="http://bremersee.org/xmlschemas/common-xml-test-model-2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="vehicle" type="tns:vehicleType"/>
+
+  <xs:complexType name="vehicleType">
+    <xs:sequence>
+      <xs:element name="brand" type="xs:string" minOccurs="0"/>
+      <xs:element name="model" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
