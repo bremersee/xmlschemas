@@ -4,7 +4,7 @@
   <xs:element name="vehicle" type="tns:vehicleType"/>
 
   <xs:simpleType name="modelType">
-    <xs:restriction base="xs:string">
+    <xs:restriction base="xs:token">
       <xs:pattern value="^[a-zA-Z]*$" />
     </xs:restriction>
   </xs:simpleType>
