@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://bremersee.org/xmlschemas/common-xml-test-model-5" xmlns:tns="http://bremersee.org/xmlschemas/common-xml-test-model-5" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="startEnd" type="tns:startEndType"/>
+
+  <xs:complexType name="startEndType">
+    <xs:sequence>
+      <xs:element name="start" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="end" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="duration" type="xs:duration" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
