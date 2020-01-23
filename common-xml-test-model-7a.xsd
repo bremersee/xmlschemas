@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0"
+  targetNamespace="http://bremersee.org/xmlschemas/common-xml-test-model-7a"
+  xmlns:tns="http://bremersee.org/xmlschemas/common-xml-test-model-7a"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Fender" type="tns:fenderType"/>
+
+  <xs:complexType name="fenderType">
+    <xs:complexContent>
+      <xs:extension base="tns:extraPartType">
+        <xs:sequence>
+          <xs:element name="front" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="extraPartType" abstract="true">
+    <xs:sequence>
+      <xs:element name="partNumber" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="producerType" abstract="true">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="bicycleType" abstract="true">
+    <xs:sequence>
+      <xs:element name="producer" type="tns:producerType" minOccurs="0"/>
+      <xs:element name="gear" type="xs:int" minOccurs="0"/>
+      <xs:element name="color" type="xs:string" minOccurs="0"/>
+      <xs:element name="extraParts" type="tns:extraPartType" nillable="true" minOccurs="0"
+        maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
