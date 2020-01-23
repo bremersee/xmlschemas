@@ -1,4 +1,3 @@
-<?xml version="1.0" standalone="yes"?>
 <xs:schema elementFormDefault="qualified" version="1.0"
   targetNamespace="http://bremersee.org/xmlschemas/common-xml-test-model-7c"
   xmlns:tns="http://bremersee.org/xmlschemas/common-xml-test-model-7c"
@@ -9,6 +8,8 @@
     schemaLocation="http://bremersee.github.io/xmlschemas/common-xml-test-model-7a.xsd"/>
 
   <xs:element name="BikeSchmied" type="tns:bikeSchmiedType"/>
+
+  <xs:element name="Carrier" type="tns:carrierType"/>
 
   <xs:element name="Fastcycle" type="tns:fastcycleType"/>
 
@@ -27,6 +28,16 @@
       <xs:extension base="ns1:producerType">
         <xs:sequence>
           <xs:element name="href" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="carrierType">
+    <xs:complexContent>
+      <xs:extension base="ns1:extraPartType">
+        <xs:sequence>
+          <xs:element name="capacity" type="xs:string" minOccurs="0"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
