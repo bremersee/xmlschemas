@@ -6,7 +6,7 @@
   xmlns:ns1="http://bremersee.org/xmlschemas/common-xml-test-model-7a">
 
   <xs:import namespace="http://bremersee.org/xmlschemas/common-xml-test-model-7a"
-    schemaLocation="http://bremersee.org/xmlschemas/common-xml-test-model-7a.xsd"/>
+    schemaLocation="http://bremersee.github.io/xmlschemas/common-xml-test-model-7a.xsd"/>
 
   <xs:element name="MountainBike" type="tns:mountainBikeType"/>
 
