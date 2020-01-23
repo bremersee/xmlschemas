@@ -8,9 +8,15 @@
   <xs:import namespace="http://bremersee.org/xmlschemas/common-xml-test-model-7a"
     schemaLocation="http://bremersee.github.io/xmlschemas/common-xml-test-model-7a.xsd"/>
 
+  <xs:element name="DirtBikeReseller" type="tns:dirtBikeResellerType"/>
+
   <xs:element name="MountainBike" type="tns:mountainBikeType"/>
 
   <xs:element name="RacingBike" type="tns:racingBikeType"/>
+
+  <xs:element name="RacingReseller" type="tns:racingResellerType"/>
+
+  <xs:element name="SportBikes" type="tns:sportBikesType"/>
 
   <xs:complexType name="mountainBikeType">
     <xs:complexContent>
@@ -28,6 +34,32 @@
         <xs:sequence>
           <xs:element name="frameSize" type="xs:int" minOccurs="0"/>
         </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sportBikesType">
+    <xs:complexContent>
+      <xs:extension base="ns1:producerType">
+        <xs:sequence>
+          <xs:element name="Reseller" type="ns1:producerType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="racingResellerType">
+    <xs:complexContent>
+      <xs:extension base="ns1:producerType">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dirtBikeResellerType">
+    <xs:complexContent>
+      <xs:extension base="ns1:producerType">
+        <xs:sequence/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
